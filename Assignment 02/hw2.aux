@@ -1,0 +1,30 @@
+\relax 
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}(\#1) The Setup and Visualization}{1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Sensor responses (RGB values) for a randomly generated set of 1600 spectra, laid out in a 40 x 40 grid.}}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}(\#2) Predicting Sensors from Perfect Output Data}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Actual sensors (blue) and predicted sensors (red) for the three channels: red (left), green (center), blue (right). Note that the match is so good that the predicted sensors completely cover the actual sensors. In an earlier version of the program, this was performed after rounding to ints, which introduced some noise and allowed both actual and predicted sensor curves to be visible.}}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The same curves by predicting after int rounding. Notice the increased error due to the decreased precision.}}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}(\#3) Adding Gaussian Noise}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces When we add Gaussian noise with standard deviation 10, the predicted sensors are much noisier as well. However, they still roughly follow the sensor curves.}}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Here, we clip the output RGBs to be in range [0, 255] to more closely resemble reality and visualize the output sensors.}}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}(\#4) Exploring Higher Noise Levels}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Actual and predicted sensors with noise of standard deviation 50, unclipped.}}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Actual and predicted sensors with noise of standard deviation 50, clipped between [0, 255].}}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Actual and predicted sensors with noise of standard deviation 100, unclipped.}}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Actual and predicted sensors with noise of standard deviation 100, clipped between [0, 255].}}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Discussion}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}(\#5) Gamma Correction}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}(\#6) Problems Using the Pseudoinverse on Real Data}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces This is my best guess of an image of the given real-world RGB values. I wanted to visualize it a little better, so I guessed at the height and width.}}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Extremely poor performance of predicted sensor curves. The noise is so bad that the actual sensor curves are dwarfed and appear close to 0.}}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Discussion}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}(\#7) Constrained Least Squared Error}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Predicted sensor curves when we constrain them to be 0 or positive. The results are much better, and the spikes tend to be near the actual sensor peaks. However, there are still several outlier spikes that are nowhere near the peaks.}}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}(\#8) Smooth, Non-negative Predictions}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces lambda (smoothing constant) = 0.0001 (very low)}}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces lambda (smoothing constant) = 0.001 (low)}}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces lambda (smoothing constant) = 0.01 (about right)}}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces lambda (smoothing constant) = 0.1 (high)}}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces lambda (smoothing constant) = 1 (very high)}}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Discussion}{8}}
